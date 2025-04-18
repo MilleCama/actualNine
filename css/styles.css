@@ -397,6 +397,12 @@ div.parent section img:hover {
   background-color: #124926;
 }
 
+#theNav li.active a {
+  background-color: #e95710;
+  color: #fff;
+  font-weight: bolder;
+}
+
 #theNav li ul li a {
   color: white;
   padding: 0.9rem 1.2rem;

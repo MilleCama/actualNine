@@ -97,6 +97,14 @@ html {
     z-index: 999;
     background-color: #124926;
   }
+
+  #theNav li.active a {
+    background-color: #e95710; // darker green
+    color: #fff;               // white text
+    font-weight:bolder;
+  }
+
+  
   #theNav li ul li a {
     color: white;              // white text
     padding: 0.9rem 1.2rem;
