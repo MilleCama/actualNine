@@ -1,0 +1,205 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: #333;
+  }
+  #headerWrapper {
+    background-color: #e95710;
+    color: $primaryColor;
+  }
+
+  
+  header {
+    display: grid;
+    grid-template-columns: 50px auto 44px;
+    column-gap: $gutter;
+    align-items: center;
+    padding: .5rem $gutter;
+    color: white;
+    span {
+      font-size: 1.6rem;
+      font-weight: $normalWeight;
+      color: white;
+    }
+  }
+  
+  
+
+
+  
+  main h1 {
+    padding: 7px;
+  }
+  
+  
+  .swiper, .swiper img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .cards {
+    display: grid;
+    gap: 7px;
+    padding: 7px;
+  
+    section {
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      img:last-child {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  
+
+  div.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    section {
+        padding: 7px;
+        img {
+            width: 100%;
+            height: auto;
+            clip-path: circle(50% at 50% 50%);
+            transition: transform 1s;
+            &:hover {transform: rotate(-15deg);}
+        }
+    }
+  }
+  #navWrapper {
+    position: relative;
+    z-index: 10;
+    background-color: #124926;
+  }
+  #theNav li ul {
+    position: absolute;
+    z-index: 999;
+    background-color: #124926;
+  }
+  #theNav li ul li a {
+    color: white;              // white text
+    padding: 0.9rem 1.2rem;
+    display: block;
+    text-decoration: none;
+  }
+  #theNav li ul li a:hover {
+    background-color: #0f3c1f; // slightly darker green on hover
+  }
+  .swiper {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+  
+  
+  // begin the footer
+  #footerWrapper {
+    background-color: $primaryColor;
+  }
+  footer {
+    padding: 0.5rem $gutter;
+    background-color: #e95710;
+    p {
+      margin: 0;
+      font-weight: $lightWeight;
+      text-align: center;
+      color: #eee;
+      background-color: #e95710;
+      
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight
+    }
+    p {
+        padding: .5rem $gutter;
+        color: #333;
+        line-height: $leading;
+    }
+}// end main
+
+
+
+.swiper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .cards section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  .cards section h2 {
+    background-color: #e95710;
+    color: white;
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  
+
+
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+    a {color: $greyColor;}
+}// end footer
